@@ -20,6 +20,15 @@ jobs:
       - name: Check out source code
         uses: actions/checkout@v2
 
+      #test pip and python
+      - name: Check pip version
+        run: |
+          pip --version
+          dpkg -l | grep python
+          update-alternatives --list python
+          python -V
+          python2 -V
+          python3 -V
       #install req
       - name: install the requirements
         run: pip install -r requirements.txt
