@@ -6,9 +6,11 @@ on:
   push:
     branches:
       - master
+      - stephane
   pull_request:
     branches:
       - master
+      - stephane
 
 
 jobs:
